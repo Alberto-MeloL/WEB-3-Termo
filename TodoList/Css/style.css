@@ -1,10 +1,12 @@
-body{
+body {
     margin: 0;
 }
-::selection{
+
+::selection {
     color: #000000;
     background-color: rgb(173, 205, 232);
 }
+
 .container {
     width: 100%;
     height: 100vh;
@@ -31,9 +33,14 @@ body{
     display: flex;
     flex-direction: column;
 }
-#configuracoes-img{
+
+#configuracoes-img {
     height: 30px;
     width: 20px;
+    margin-top: 100%;
+    margin-left: 90%;
+    box-shadow: 1px 1px 10px 1px #0000004c;
+    border-radius: 5px;
 }
 
 .barra-pesquisa {
@@ -67,7 +74,8 @@ body{
 }
 
 .acoes-tarefas {
-    display: none;/*ser flex após o click*/ 
+    display: none;
+    /*ser flex após o click*/
     justify-content: space-between;
     align-items: center;
     background-color: rgba(92, 114, 143, 0.555);
@@ -76,15 +84,16 @@ body{
     margin-top: 100%;
     border-radius: 10px;
 }
-.acoes-tarefas #fechar-janela{
-margin-bottom: 40%;
-background-color: rgba(254, 0, 0, 0.162);
-border-radius: 5px;
-border: 1px solid rgba(255, 2, 2, 0.546);
-cursor: pointer;
+
+.acoes-tarefas #fechar-janela {
+    margin-bottom: 40%;
+    background-color: rgba(254, 0, 0, 0.162);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 2, 2, 0.546);
+    cursor: pointer;
 }
 
-.excluir{
+.excluir {
     width: 20%;
     height: 7vh;
     background-color: rgba(253, 78, 78, 0.489);
@@ -94,33 +103,33 @@ cursor: pointer;
     cursor: pointer;
 }
 
-.excluir span{
+.excluir span {
     width: 3%;
     height: 2%;
     color: rgb(255, 1, 1);
 }
 
-.concluir{
+.concluir {
     width: 20%;
     height: 7vh;
     background-color: rgba(106, 177, 92, 0.523);
-    border-radius: 5px; 
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     cursor: pointer;
 }
 
-.observacoes{
+.observacoes {
     width: 20%;
     height: 7vh;
     background-color: rgba(207, 250, 79, 0.712);
     border-radius: 5px;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     cursor: pointer;
 }
 
-p{
+p {
     font-size: 11pt;
     color: aliceblue;
 }
