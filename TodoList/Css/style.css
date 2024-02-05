@@ -1,0 +1,126 @@
+body{
+    margin: 0;
+}
+::selection{
+    color: #000000;
+    background-color: rgb(173, 205, 232);
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tarefas {
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
+    overflow-y: scroll;
+}
+
+.tarefas h1 {
+    font-family: cursive;
+    color: rgb(252, 232, 52);
+    position: fixed;
+}
+
+.configuracoes {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#configuracoes-img{
+    height: 30px;
+    width: 20px;
+}
+
+.barra-pesquisa {
+    width: 80%;
+    height: 3vh;
+    background-color: rgba(14, 26, 43, 0.74);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barra-pesquisa input {
+    display: flex;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(14, 26, 43, 0);
+    outline: 0;
+    color: rgb(255, 255, 255);
+
+}
+
+.barra-pesquisa input::placeholder {
+    color: rgb(255, 255, 255);
+    font-family: cursive;
+}
+
+.barra-pesquisa img {
+    height: 15px;
+    cursor: pointer;
+}
+
+.acoes-tarefas {
+    display: none;/*ser flex após o click*/ 
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(92, 114, 143, 0.555);
+    width: 100%;
+    height: calc(100% - 70%);
+    margin-top: 100%;
+    border-radius: 10px;
+}
+.acoes-tarefas #fechar-janela{
+margin-bottom: 40%;
+background-color: rgba(254, 0, 0, 0.162);
+border-radius: 5px;
+border: 1px solid rgba(255, 2, 2, 0.546);
+cursor: pointer;
+}
+
+.excluir{
+    width: 20%;
+    height: 7vh;
+    background-color: rgba(253, 78, 78, 0.489);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.excluir span{
+    width: 3%;
+    height: 2%;
+    color: rgb(255, 1, 1);
+}
+
+.concluir{
+    width: 20%;
+    height: 7vh;
+    background-color: rgba(106, 177, 92, 0.523);
+    border-radius: 5px; 
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.observacoes{
+    width: 20%;
+    height: 7vh;
+    background-color: rgba(207, 250, 79, 0.712);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center; 
+    cursor: pointer;
+}
+
+p{
+    font-size: 11pt;
+    color: aliceblue;
+}
