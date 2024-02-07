@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+    <link rel="stylesheet" href="/TodoList/Css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tarefas">
+            <h1>Minhas Terefas</h1>
+        </div>
+
+        <div class="lista-tarefas">
+
+        </div>
+        <div class="configuracoes">
+            <div class="barra-pesquisa">
+                <input type="text" placeholder="Busca tarefa...">
+                <img src="/TodoList/Image/lupa-pesquisa.png" alt="Icone da barra de pesquisa">
+            </div>
+            <img id="configuracoes-img" src="/TodoList/Image/configuracoes.png" alt="Icone de configurações" onclick="visivelD()">
+            <div class="acoes-tarefas">
+                <button id="fechar-janela">X</button>
+                <div class="concluir">
+                    <p>Adicionar</p>
+                </div>
+                <div class="excluir">
+                    <p>Excluir</p>
+                </div>
+                <div class="observacoes">
+                    <p>Observação</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/TodoList/Js/mostrarConfiguracoes.js"></script>
+</html>
