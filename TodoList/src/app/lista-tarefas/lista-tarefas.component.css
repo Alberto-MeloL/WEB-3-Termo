@@ -1,0 +1,203 @@
+
+::selection {
+  color: #000000;
+  background-color: rgb(173, 205, 232);
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tarefas {
+  width: 40%;
+  display: flex;
+  justify-content: flex-start;
+  overflow-y: scroll;
+}
+
+.tarefas h1 {
+    width: 100%;
+    z-index: -100;
+  font-family: cursive;
+  color: rgb(252, 232, 52);
+  position: fixed;
+  box-shadow: #00000021 0px 10px 10px 0px;
+}
+
+.configuracoes {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.barra-pesquisa {
+  width: 80%;
+  height: 3vh;
+  background-color: rgba(14, 26, 43, 0.74);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.barra-pesquisa input {
+  display: flex;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(14, 26, 43, 0);
+  outline: 0;
+  color: rgb(255, 255, 255);
+  font-size: 15pt;
+}
+
+.barra-pesquisa input::placeholder {
+  color: rgb(255, 255, 255);
+  font-family: cursive;
+}
+
+.barra-pesquisa img {
+  height: 15px;
+  cursor: pointer;
+}
+
+.nova-tarefa{
+  display: flex;
+  justify-content: end;
+  margin-right: 3%;
+  width: 50%;
+}
+
+  .nova-tarefa button{
+    border: none;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 20pt;
+  }
+
+.observacoes{
+    width: 80%;
+    height: 20%;
+    background-color: rgba(255, 255, 92, 0.397);
+    border: 1px solid #000000;
+    border-radius: 5px;
+    position: fixed;
+    margin: 10% 0% 0% 0%;
+}
+
+.observacoes p{
+    padding-left: 1%;
+color: #000000;
+}
+.acoes-tarefas {
+  display: flex;
+  /*ser flex após o click*/
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(92, 114, 143, 0.555);
+  width: 100%;
+  height: calc(100% - 70%);
+  margin-top: 100%;
+  border-radius: 10px;
+}
+
+.acoes-tarefas #fechar-janela {
+  margin-bottom: 40%;
+  background-color: rgba(254, 0, 0, 0.162);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 2, 2, 0.546);
+  cursor: pointer;
+}
+
+.excluir {
+  width: 20%;
+  height: 7vh;
+  background-color: rgba(253, 78, 78, 0.489);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.excluir span {
+  width: 3%;
+  height: 2%;
+  color: rgb(255, 1, 1);
+}
+
+.concluir {
+  width: 20%;
+  height: 7vh;
+  background-color: rgba(106, 177, 92, 0.523);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.editar {
+  width: 20%;
+  height: 7vh;
+  background-color: rgba(207, 250, 79, 0.712);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+p {
+  font-size: 11pt;
+  color: aliceblue;
+}
+
+.lista-tarefas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  height: 5%;
+  width: 100%;
+  border-bottom: 1px solid #0000004d;
+}
+
+.lista-tarefas:hover{
+    box-shadow: #00000096 0px 2px 5px -1px;
+}
+
+.adicionar-tarefa{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #3b414638;
+  width: 30%;
+  border-radius: 5px;
+  height: 40%;
+  margin: auto;
+  transition: all .5s ease;
+}
+
+.adicionar-tarefa input{
+margin-bottom: 5%;
+padding-bottom: 5%;
+background-color: #ffffff;
+border: 1px solid #000000;
+border-radius: 5px;
+outline: 0;
+}
+
+.adicionar-tarefa input:focus{
+font-size: 15pt;
+}
+
+.adicionar-tarefa button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #a3fa70;
+  border: 1px solid #5eff00b4;
+  border-radius: 5px;
+}

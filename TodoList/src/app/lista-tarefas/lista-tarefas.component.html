@@ -1,0 +1,50 @@
+
+    <div class="container">
+      <div class="tarefas">
+        <h1>Minhas Terefas</h1>
+
+        <div *ngFor="let tarefa of tarefas" class="lista-tarefas">
+          <h3>{{ tarefa.nome }}</h3>
+        </div>
+      </div>
+
+      <div *ngIf="mostrar" class="adicionar-tarefa">
+        <input type="text" placeholder="Nome da tarefa...">
+        <label>Data de Inicío</label>
+        <input type="date">
+        <label>Data de Término</label>
+        <input type="date">
+        <input type="text" placeholder="Observações...">
+        <button>Confirmar</button>
+      </div>
+
+      <div class="configuracoes">
+        <div class="barra-pesquisa">
+          <input type="text" placeholder="Busca tarefa..." />
+          <img
+            src="assets/image/lupa-pesquisa.png"
+            alt="Icone da barra de pesquisa"
+          />
+
+          <div class="nova-tarefa">
+            <button (click)="mostrarDivNovaTarefa()">+</button>
+          </div> 
+        </div>
+        
+        <div class="observacoes">
+            <p>{{"Nada para mostrar..."}}</p>
+        </div>
+        <div class="acoes-tarefas">
+          <div class="concluir">
+            <p>Concluir</p>
+          </div>
+          <div class="excluir">
+            <p>Excluir</p>
+          </div>
+          <div class="editar">
+            <p>Editar</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
