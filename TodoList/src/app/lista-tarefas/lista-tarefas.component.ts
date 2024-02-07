@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Tarefas } from '../inteface/Tarefas';
+import { Tarefas } from '../interface/Tarefas';
 import { CommonModule } from '@angular/common';
 
 @Component({
