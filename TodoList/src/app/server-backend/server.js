@@ -4,6 +4,8 @@ import Tarefa from '../database/tabelaTarefa.js';
 
 const app = express();
 
+app.use(express.json());
+
 const PORTA = process.env.PORTA || 3000;
 
 let tarefas = []
