@@ -4,18 +4,16 @@
         <h1>Minhas Terefas</h1>
 
         <div *ngFor="let tarefa of tarefas" class="lista-tarefas">
-          <h3>{{ tarefa.nome }}</h3>
+          <h3>{{ tarefa?.nome }}</h3>
+          <p>{{tarefa?.observacoes}}</p>
         </div>
       </div>
 
       <div *ngIf="mostrar" class="adicionar-tarefa">
-        <input type="text" placeholder="Nome da tarefa...">
-        <label>Data de Inicío</label>
-        <input type="date">
-        <label>Data de Término</label>
-        <input type="date">
-        <input type="text" placeholder="Observações...">
-        <button>Confirmar</button>
+        
+        <input type="text"  name="nome" [(ngModel)]="nome" placeholder="Nome da tarefa..." >
+        <input type="text" name="observacoes" [(ngModel)]="observacoes" placeholder="Observações...">
+        <button (click)="adicionarTarefa()">Confirmar</button>
       </div>
 
       <div class="configuracoes">

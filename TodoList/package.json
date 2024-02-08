@@ -1,6 +1,7 @@
 {
   "name": "todo-list",
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -21,6 +22,7 @@
     "@angular/platform-server": "^17.0.0",
     "@angular/router": "^17.0.0",
     "@angular/ssr": "^17.0.6",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "rxjs": "~7.8.0",
     "sequelize": "^6.36.0",
