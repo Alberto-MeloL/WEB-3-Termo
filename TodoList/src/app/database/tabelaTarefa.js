@@ -6,16 +6,16 @@ const Tarefa = banco.sequelize.define('tarefa', {
         unique: true
     },
     observacoes:{
-        type: banco.Sequelize.TEXT,
+        type: banco.Sequelize.STRING,
         allowNull: false,
     }
 })
 
 
-try {
-   Tarefa.sync();  
-} catch (error) {
-    console.error('Erro na criação da tabela', error)
-}
+Tarefa.sync().then(() => {
+    console.log('Tabela criada com sucesso.');
+}).catch(error => {
+    console.error('Erro na criação da tabela', error);
+});
 
 export default Tarefa;
