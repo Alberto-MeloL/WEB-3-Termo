@@ -12,38 +12,48 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './lista-tarefas.component.html',
   styleUrls: ['./lista-tarefas.component.css'], //diferenças []
 })
-export class ListaTarefasComponent implements OnInit{
-nome: string = '';
-observacoes: string = '';
-tarefas: Tarefas[] = [];
-
-
-  mostrar: boolean = false;
-  mostrarDivNovaTarefa(): void{
-    this.mostrar = !this.mostrar;
-      }
+export class ListaTarefasComponent implements OnInit {
  
+  nome: string = '';
+  observacoes: string = '';
+  tarefas: Tarefas[] = [];
 
-  constructor(private cadastroTarefaService: CadastroTarefaService){
+  menuHb: boolean = false
+  mostrar: boolean = false;
+  mostrarDivNovaTarefa(): void {
+    this.mostrar = !this.mostrar;
+  }
+
+  menuHbTrue(): void{
+    if (window.innerWidth < 1200) { //verificando a largura
+      this.menuHb = true
+      console.log(`O menuHb é: ${this.menuHb}`)
+
+    }
+    }
+  
+
+  constructor(private cadastroTarefaService: CadastroTarefaService) {
     this.getTarefas();
   }
- ngOnInit(): void {}
+  ngOnInit(): void { }
 
- getTarefas(): void{
-  this.cadastroTarefaService.getTodasTarefas().subscribe((tarefas) => (this.tarefas = tarefas));
- }
-
- adicionarTarefa(): void{
-  const dadosForm ={
-nome: this.nome, 
-observacoes: this.observacoes
+  getTarefas(): void {
+    this.cadastroTarefaService.getTodasTarefas().subscribe((tarefas) => (this.tarefas = tarefas));
   }
 
-  this.cadastroTarefaService.cadastroTarefas(dadosForm).subscribe(novaTarefa => {
-    this.tarefas.push(novaTarefa);
-    console.log(this.tarefas)
-    this.nome = '';
-    this.observacoes = '';
-  })
- }
+  adicionarTarefa(): void {
+    const dadosForm = {
+      nome: this.nome,
+      observacoes: this.observacoes
+    }
+
+    this.cadastroTarefaService.cadastroTarefas(dadosForm).subscribe(novaTarefa => {
+      this.tarefas.push(novaTarefa);
+      console.log(this.tarefas)
+      this.nome = '';
+      this.observacoes = '';
+    })
+  }
+
 }

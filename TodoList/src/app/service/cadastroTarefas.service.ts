@@ -14,10 +14,10 @@ export class CadastroTarefaService{
     constructor(private http: HttpClient){}
 
     cadastroTarefas(dadosForm : {nome: string, observacoes: string}): Observable<any>{
-        const urlCadastro =`${this.Url}/`;
+        const urlCadastro =`${this.Url}`;
         console.log('URL da requisição: ->', urlCadastro);
 
-        return this.http.post(this.Url, dadosForm).pipe(
+        return this.http.post(urlCadastro, dadosForm).pipe(
             catchError(error =>{
                 console.error('Erro na requisição: ->', error);
                 throw error

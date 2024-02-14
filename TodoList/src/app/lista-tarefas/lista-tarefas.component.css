@@ -13,9 +13,7 @@
 
 .tarefas {
   width: 40%;
-  display: flex;
-  justify-content: flex-start;
-  overflow-y: scroll;
+  height: 10%;
 }
 
 .tarefas h1 {
@@ -24,9 +22,35 @@
   font-family: cursive;
   color: rgb(252, 232, 52);
   position: fixed;
-  box-shadow: #00000021 0px 10px 10px 0px;
+  box-shadow: #3a393910 0px 10px 10px 0px;
 }
 
+.lista-tarefas{
+  margin-top: 20%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 50vh;
+  width: 70%;
+  background-color: #6666662b;
+}
+
+.lista-tarefas p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.item-tarefa{
+  background-color: #3a393910;
+  height: 20%;
+  margin-bottom: 5%;
+}
+
+.item-tarefa:hover{
+  box-shadow: #00000051 2px 0px 10px 0px;
+}
 .configuracoes {
   width: 30%;
   height: 100%;
@@ -154,19 +178,7 @@ p {
   color: aliceblue;
 }
 
-.lista-tarefas {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 100px;
-  height: 5%;
-  width: 100%;
-  border-bottom: 1px solid #0000004d;
-}
 
-.lista-tarefas:hover{
-    box-shadow: #00000096 0px 2px 5px -1px;
-}
 
 .adicionar-tarefa{
   display: flex;
@@ -179,6 +191,7 @@ p {
   margin: auto;
   transition: all .5s ease;
 }
+
 
 .adicionar-tarefa input{
 margin-bottom: 5%;
@@ -200,4 +213,27 @@ font-size: 15pt;
   background-color: #a3fa70;
   border: 1px solid #5eff00b4;
   border-radius: 5px;
+}
+
+@media screen and (max-width:1600px){
+ .barra-pesquisa{
+  width: 100%;
+  height: 10%;
+ }
+
+.observacoes{
+  height: 40%;
+}
+}
+
+@media screen and (max-width:1200px){
+  .configuracoes{
+z-index: 900;
+    margin-right: 5%;
+  }
+ 
+  .observacoes{
+    width: 30%;
+  }
+
 }
