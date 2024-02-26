@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './lista-tarefas.component.html',
   styleUrls: ['./lista-tarefas.component.css'], //diferenças []
 })
-export class ListaTarefasComponent implements OnInit {
+export class ListaTarefasComponent implements OnInit, Tarefas {
  
   nome: string = '';
   observacoes: string = '';
@@ -56,4 +56,12 @@ export class ListaTarefasComponent implements OnInit {
     })
   }
 
+editarTarefa(index: number, obs: string): string{
+ if (index >= 0 && index < this.tarefas.length) {
+this.tarefas[index].observacoes = obs;
+ }else{
+
+ }
+  return obs
+}
 }
