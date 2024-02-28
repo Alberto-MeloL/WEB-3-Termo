@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    top: 0;
+    padding: 0;
+    font-family: "Impact," "Haettenschweiler", 'Arial Narrow Bold', "sans-serif"; /*fontes padrões*/
+}
+
+:root{
+    --laranja: #dd912e;
+    --preto: #181717b4;
+    --branco: #ffffff;
+    --verde: #298512e0;
+    --amarelo: #eccf4c;
+    --laranjaClaro: #f5c17d;
+}
+
+/* cores da seleção */
+::selection{
+    background-color: var(--laranjaClaro);
+    color: var(--preto);
+}
+::-moz-selection{
+    background-color: var(--laranjaClaro);
+    color: var(--preto);
+}
+
+/* cores dos links */
+a{
+    color: var(--preto);
+}
