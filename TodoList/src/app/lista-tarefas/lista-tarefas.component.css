@@ -18,9 +18,9 @@
   overflow-y: scroll;
 }
 
-.tarefas h1 {
-    width: 100%;
-    z-index: -100;
+.lista-tarefas h1 {
+  top: 0;
+    width: 30%;
   font-family: cursive;
   color: rgb(252, 232, 52);
   position: fixed;
@@ -158,14 +158,28 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 100px;
-  height: 5%;
+  margin-top: 20%;
+  height: 50%;
   width: 100%;
-  border-bottom: 1px solid #0000004d;
+  background-color: #00000023;
+  overflow-y: scroll;
 }
 
-.lista-tarefas:hover{
-    box-shadow: #00000096 0px 2px 5px -1px;
+.item-tarefa{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 3vh;
+  background-color: #00000046;
+  margin-bottom: 2%;
+}
+
+.item-tarefa p{
+  margin-left: 5%;
+}
+
+.item-tarefa:hover{
+  box-shadow: #000000a8 10px 10px 10px -8px;
 }
 
 .adicionar-tarefa{

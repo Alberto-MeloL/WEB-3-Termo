@@ -29,5 +29,6 @@ body{
 
 /* cores dos links */
 a{
-    color: var(--preto);
+    color: var(--branco);
+    text-decoration: none;
 }

@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh; /*porque isso influencia o alinhamento?*/
+}
+
+.background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("/TrainingValidation/src/assets/image/background-cadastro.png");
+  opacity: 1;
+}
