@@ -2,19 +2,23 @@
     <div class="container">
       <div class="lista-tarefas">
         <h1>Minhas Terefas</h1>
-
-        <div *ngFor="let tarefa of tarefas" class="item-tarefa">
-          <h3>{{ tarefa.nome }}</h3>
-        </div>
+<div class="lista-tarefas">
+  <div *ngFor="let tarefa of tarefas" class="item-tarefa">
+    <p>{{ tarefa?.nome }}</p>
+    
+    <p>{{tarefa?.observacoes}}</p>
+  </div>
+</div>
+>>>>>>> f1b8a70101738af0fb1d1cf104115391791610ef
       </div>
 
       <div *ngIf="mostrar" class="adicionar-tarefa">
         
-        <input type="text"  name="nome" [(ngModel)]="nome" placeholder="Nome da tarefa..." >
-        <input type="text" name="observacoes" [(ngModel)]="observacoes" placeholder="Observações...">
+        <input type="text"  placeholder="Nome da tarefa...">
+        <input type="text"  placeholder="Observações...">
         <button (click)="adicionarTarefa()">Confirmar</button>
       </div>
-
+<!--  [(ngModel)]="nome"  [(ngModel)]="observacoes"-->
       <div class="configuracoes">
         <div class="barra-pesquisa">
           <input type="text" placeholder="Busca tarefa..." />
