@@ -13,10 +13,9 @@ header {
   background-color: var(--laranja);
 }
 
-header h1{
-    color: var(--branco);
-    text-transform: uppercase;
-        
+header h1 {
+  color: var(--branco);
+  text-transform: uppercase;
 }
 
 .onde-nos-encontrar {
@@ -45,26 +44,25 @@ header h1{
   width: 55px;
 }
 
-.header-links-navegacao{
+.header-links-navegacao {
   width: 100%;
   height: 30%;
   background-color: var(--preto);
   display: flex;
 }
 
-.header-links-navegacao img{
+.header-links-navegacao img {
   width: 100px;
   height: 64px;
 }
-.header-links-navegacao a{
+.header-links-navegacao a {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
   padding-right: 5%;
 }
 
-.minha-conta{
-  
+.minha-conta {
   width: 60%;
   display: flex;
   justify-content: end;

@@ -1,0 +1,50 @@
+footer{
+    width: 100%;
+    height: 20%;
+    background-color: var(--preto);
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer img{
+    width: 100.83px;
+    height: 64px;
+}
+
+.loja-fisica{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.loja-fisica a{
+    font-size: 15pt;
+}
+/* sistema de avaliações  */
+.avaliacoes{
+    display: flex;
+    margin-right: 5%;
+}
+
+.estrela-icone{
+    list-style: none;
+    border: 1px solid var(--branco);
+    cursor: pointer;
+    color: var(--amarelo)
+}
+
+.estrela-icone::before{/*pensar sempre nos codigos evita trabalhos*/
+   content: "\2605"; /*código da estrela cheia*/
+}
+
+.estrela-icone:hover ~ .estrela-icone::before{
+    content: "\2606"; /*código da estrela vazia*/
+}
+
+.avaliacoes:hover ~.estrela-icone::before{/*ou seja ira pegar todos os precedentes a ele*/
+content: "\2605";
+}
