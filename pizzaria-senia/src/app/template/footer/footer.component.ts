@@ -9,4 +9,14 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
+  
+  getAvaliacao(dataAvaliacao: number){//recebendo o atributa data-avaliacao
+    const estrelaSelecionada = document.querySelector('.estrela-icone');
+    const getDataAvaliacao = estrelaSelecionada?.getAttribute('data-avaliacao')
+
+    
+  
+  
+  
+  }
 }

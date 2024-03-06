@@ -27,24 +27,41 @@ footer img{
 /* sistema de avaliações  */
 .avaliacoes{
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin-right: 5%;
+    /* background-color: var(--); */
+    width: 15%;
+    height: 15%;
+    margin-top: 2%;
+    border-radius: 5px;
 }
 
-.estrela-icone{
-    list-style: none;
-    border: 1px solid var(--branco);
-    cursor: pointer;
-    color: var(--amarelo)
+.avaliacao{
+    display: flex;
+    flex-direction: row;
+
 }
+.estrela-icone{
+    margin-left: 5%;
+    list-style: none;
+    cursor: pointer;
+    color: var(--amarelo);
+}
+
 
 .estrela-icone::before{/*pensar sempre nos codigos evita trabalhos*/
    content: "\2605"; /*código da estrela cheia*/
+   box-shadow: var(--amarelo) 2px 2px 10px -5px;
 }
-
+.estrela-icone.ativo ~ .estrela-icone::before{
+    content: "\2606";
+}
+.avaliacao:hover .estrela-icone::before{
+    content: "\2605";
+}
 .estrela-icone:hover ~ .estrela-icone::before{
     content: "\2606"; /*código da estrela vazia*/
 }
 
-.avaliacoes:hover ~.estrela-icone::before{/*ou seja ira pegar todos os precedentes a ele*/
-content: "\2605";
-}
+/* como pegar o santecedentes */
