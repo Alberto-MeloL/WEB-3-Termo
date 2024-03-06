@@ -65,3 +65,8 @@ footer img{
 }
 
 /* como pegar o santecedentes */
+    @media screen and (max-width:1280px){
+        .loja-fisica img{
+            height: 70px;
+        }
+    }
