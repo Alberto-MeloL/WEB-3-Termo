@@ -30,7 +30,7 @@ footer img{
     justify-content: center;
     align-items: center;
     margin-right: 5%;
-    /* background-color: var(--); */
+    background-color: var(--branco  );
     width: 15%;
     height: 15%;
     margin-top: 2%;
@@ -68,5 +68,8 @@ footer img{
     @media screen and (max-width:1280px){
         .loja-fisica img{
             height: 70px;
+        }
+        .loja-fisica a{
+            font-size: 12pt;
         }
     }
