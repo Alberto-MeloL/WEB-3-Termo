@@ -1,5 +1,42 @@
-.container{
-    width: 40%;
-    height: 50%;
-    background-color: var(--cinza);
+.container {
+  width: 40%;
+  height: 50%;
+  background-color: var(--cinza);
+}
+.promocoes {
+  width: 100%;
+  height: 100%;
+}
+.promocoes select {
+  width: 100%;
+  padding: 3% 0 3% 40%;
+  background-color: var(--laranjaClaro);
+}
+
+.promocoes option {
+  font-size: 20pt;
+}
+
+.produtos {
+  height: 70%;
+  margin-top: 3%;
+  background-color: var(--laranja);
+  border-radius: 5px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+.itens {
+  width: 75%;
+  height: 20%;
+  background-color: var(--branco);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 2%;
+}
+
+.itens img {
+  height: 100px;
 }

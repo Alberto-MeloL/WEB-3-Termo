@@ -25,16 +25,24 @@ footer img{
     font-size: 15pt;
 }
 /* sistema de avaliações  */
+
+.container-avaliacoes{
+    height: 60%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
 .avaliacoes{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 5%;
     background-color: var(--branco  );
-    width: 15%;
-    height: 15%;
-    margin-top: 2%;
+    width: 60%;
+    height: 25%;
+    margin: 5% 0 5% 20px;
     border-radius: 5px;
+
 }
 
 .avaliacao{
@@ -46,8 +54,13 @@ footer img{
     margin-left: 5%;
     list-style: none;
     cursor: pointer;
-    color: var(--amarelo);
+    color: var(--laranja);
 }
+.feedback a{
+text-decoration: underline;
+font-size: 14pt;
+}
+
 
 
 .estrela-icone::before{/*pensar sempre nos codigos evita trabalhos*/
