@@ -8,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-
+width: boolean = false;
+getWidth(){
+  
+  if (window.innerWidth == 1280) {
+    this.width = !this.width;
+  }
+}
 }
