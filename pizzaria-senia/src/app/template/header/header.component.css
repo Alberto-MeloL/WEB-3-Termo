@@ -19,7 +19,7 @@ header h1 {
 }
 
 .onde-nos-encontrar {
-  width: 10%;
+  width: 15%;
   display: flex;
   flex-direction: column;
   padding-right: 2%;
@@ -81,5 +81,12 @@ header h1 {
  .header-links-navegacao img{
 height: 30px;
 width: 45px;
+}
+
+.onde-nos-encontrar p{
+font-size: 7pt;
+}
+.onde-nos-encontrar{
+margin-top: 2%;
 }
 }

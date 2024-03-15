@@ -1,4 +1,5 @@
 <footer>
+  <!-- endereço -->
   <div class="loja-fisica">
     <img src="assets/image/localizacao.png" alt="Imagem da localização" />
     <a
@@ -9,18 +10,30 @@
     >
   </div>
 
+  <!-- avaliações -->
   <div class="container-avaliacoes">
-  <div class="avaliacoes">
-    <p>Avaliar</p>
+    <div class="avaliacoes">
+      <p>Avaliar</p>
 
-    <ul class="avaliacao">
-      <li *ngFor="let estrela of [0,1,2,3,4]; let i = index" class="estrela-icone" [class.ativo]="i === avaliacaoSelecionada" (click)="getAvaliacao(i)"></li>
-      <!-- a classe so vai ser ativa onde atender os requisitos -->
-    </ul>
-    
+      <ul class="avaliacao">
+        <li
+          *ngFor="let estrela of [0, 1, 2, 3, 4]; let i = index"
+          class="estrela-icone"
+          [class.ativo]="i === avaliacaoSelecionada"
+          (click)="getAvaliacao(i)"
+        ></li>
+        <!-- a classe so vai ser ativa onde atender os requisitos -->
+      </ul>
+    </div>
+
+    <!-- avaliação por escito -->
+    <div class="feedback">
+      <a href="#"
+        ><img
+          src="assets/image/feedback.png"
+          alt="Imagem representando um chat."
+        />Deixar meu FeddBack</a
+      >
+    </div>
   </div>
-  <div class="feedback">
-    <a href="#"><img src="assets/image/feedback.png" alt="Imagem representando um chat.">Deixar meu FeddBack</a>
-  </div>
-</div>
 </footer>

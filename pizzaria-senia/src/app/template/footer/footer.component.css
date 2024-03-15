@@ -27,16 +27,17 @@ footer img {
 /* sistema de avaliações  */
 
 .container-avaliacoes {
-  height: 60%;
-  width: 50%;
+  height: 100%;
+  width: 20%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .avaliacoes {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 5%;
+  /* margin-right: 5%; */
   background-color: var(--branco);
   width: 60%;
   height: 25%;
@@ -54,9 +55,19 @@ footer img {
   cursor: pointer;
   color: var(--laranja);
 }
+.feedback{
+  display: flex;
+  justify-content: center;
+
+}
 .feedback a {
   text-decoration: underline;
   font-size: 14pt;
+}
+
+.feedback img{
+  height: 45px;
+  width: 30px;
 }
 
 .estrela-icone::before {
@@ -75,7 +86,8 @@ footer img {
 }
 
 /* como pegar o santecedentes */
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1500px) {
+ 
   .loja-fisica img {
     height: 70px;
   }
@@ -83,11 +95,15 @@ footer img {
     font-size: 12pt;
   }
   .container-avaliacoes {
-    width: 50%;
+    width: 60%;
     margin-left: 30%;
   }
   .avaliacoes{
     margin: 5% 0 5% 0%;
 
+  }
+
+  @media screen and (max-width: 900px) {
+    
   }
 }
