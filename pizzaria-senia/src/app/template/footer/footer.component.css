@@ -1,88 +1,93 @@
-footer{
-    width: 100%;
-    height: 20%;
-    background-color: var(--preto);
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    justify-content: space-between;
+footer {
+  width: 100%;
+  height: 20%;
+  background-color: var(--preto);
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
-footer img{
-    width: 100.83px;
-    height: 64px;
+footer img {
+  width: 100.83px;
+  height: 64px;
 }
 
-.loja-fisica{
-    width: 30%;
-    height: 100%;
-    display: flex;
-    justify-content: start;
-    align-items: center;
+.loja-fisica {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 
-.loja-fisica a{
-    font-size: 15pt;
+.loja-fisica a {
+  font-size: 15pt;
 }
 /* sistema de avaliações  */
 
-.container-avaliacoes{
-    height: 60%;
-    width: 20%;
-    display: flex;
-    flex-direction: column;
+.container-avaliacoes {
+  height: 60%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
 }
-.avaliacoes{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 5%;
-    background-color: var(--branco  );
-    width: 60%;
-    height: 25%;
-    margin: 5% 0 5% 20px;
-    border-radius: 5px;
-
-}
-
-.avaliacao{
-    display: flex;
-    flex-direction: row;
-
-}
-.estrela-icone{
-    margin-left: 5%;
-    list-style: none;
-    cursor: pointer;
-    color: var(--laranja);
-}
-.feedback a{
-text-decoration: underline;
-font-size: 14pt;
+.avaliacoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5%;
+  background-color: var(--branco);
+  width: 60%;
+  height: 25%;
+  margin: 5% 0 5% 15%;
+  border-radius: 5px;
 }
 
+.avaliacao {
+  display: flex;
+  flex-direction: row;
+}
+.estrela-icone {
+  margin-left: 5%;
+  list-style: none;
+  cursor: pointer;
+  color: var(--laranja);
+}
+.feedback a {
+  text-decoration: underline;
+  font-size: 14pt;
+}
 
-
-.estrela-icone::before{/*pensar sempre nos codigos evita trabalhos*/
-   content: "\2605"; /*código da estrela cheia*/
-   box-shadow: var(--amarelo) 2px 2px 10px -5px;
+.estrela-icone::before {
+  /*pensar sempre nos codigos evita trabalhos*/
+  content: "\2605"; /*código da estrela cheia*/
+  box-shadow: var(--amarelo) 2px 2px 10px -5px;
 }
-.estrela-icone.ativo ~ .estrela-icone::before{
-    content: "\2606";
+.estrela-icone.ativo ~ .estrela-icone::before {
+  content: "\2606";
 }
-.avaliacao:hover .estrela-icone::before{
-    content: "\2605";
+.avaliacao:hover .estrela-icone::before {
+  content: "\2605";
 }
-.estrela-icone:hover ~ .estrela-icone::before{
-    content: "\2606"; /*código da estrela vazia*/
+.estrela-icone:hover ~ .estrela-icone::before {
+  content: "\2606"; /*código da estrela vazia*/
 }
 
 /* como pegar o santecedentes */
-    @media screen and (max-width:1280px){
-        .loja-fisica img{
-            height: 70px;
-        }
-        .loja-fisica a{
-            font-size: 12pt;
-        }
-    }
+@media screen and (max-width: 1300px) {
+  .loja-fisica img {
+    height: 70px;
+  }
+  .loja-fisica a {
+    font-size: 12pt;
+  }
+  .container-avaliacoes {
+    width: 50%;
+    margin-left: 30%;
+  }
+  .avaliacoes{
+    margin: 5% 0 5% 0%;
+
+  }
+}
