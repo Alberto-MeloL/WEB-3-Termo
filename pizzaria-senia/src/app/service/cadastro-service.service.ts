@@ -11,6 +11,10 @@ export class CadastroServiceService {
 
   constructor(private http: HttpClient) { }
 
-  
+  cadastrarCliente(dadosCliente: any): Observable<any>{
 
+    return this.http.post(this.URL, dadosCliente);
+  }
+
+ 
 }

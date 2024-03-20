@@ -1,20 +1,20 @@
 <div class="container">
-  <form action="" method="post">
-
+  <form [formGroup]="formCliente" (ngSubmit)="onSubmit()">
+<!-- sincronizar os dados com o formulario -->
     <label for="nome">Nome:</label>
-    <input type="text" name="nome" id="nome" required>
+    <input type="text" formControlName="nome" id="nome" required>
 
     <label for="email">Email</label>
-    <input type="email" name="email" id="email" required>
+    <input type="email" formControlName="email" id="email" required>
 
     <label for="telefone">Telefone</label>
-    <input type="tel" name="telefone" id="telefone" required>
+    <input type="tel" formControlName="telefone" id="telefone" required>
 
     <label for="endereco">Endereço</label>
-    <input type="text" name="endereco" id="endereco" required>
+    <input type="text" formControlName="endereco" id="endereco" required>
 
     <label for="senha">Senha</label>
-    <input type="password" name="senha" id="senha" required>
+    <input type="password" formControlName="senha" id="senha" required>
 
     <input id="btn-cadastrar-me" type="submit" value="Cadastrar-me" >
 

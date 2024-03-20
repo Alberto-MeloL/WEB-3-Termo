@@ -1,7 +1,5 @@
-import sequelize from "sequelize";
 import express from "express";
 import cors from "cors";
-import database from "./database.js";//importa as confgurações do banco
 import pool from "./database.js";
 
 const PORT = 3000;
@@ -25,15 +23,17 @@ app.get("/", (req,res) => {
 app.post("/cadastro", async (req, res) => {
 
 const {nome, email, telefone, endereco, senha} = req.body;
-
+console.log(req.body)
 try {
     const resultado = await pool.query(
-        'INSERT INTO tbl_cliente (nome_cliente, email_cliente, telefone_cliente, endereco_cliente, senha_cliente) VALUES ($1, $2, $3, $4, $5) RETURNING *',
+        //erro de digitação colocar no log
+        //erros de multiplas respostas
+        'INSERT INTO tbl_clientes (nome_cliente, email_cliente, telefone_cliente, endereco_cliente, senha_cliente) VALUES ($1, $2, $3, $4, $5) RETURNING *',
         [nome, email, telefone, endereco, senha]
     )
     res.status(201).json(resultado.rows[0])
 } catch (error) {
-    res.json(500).send("Erro ao cadastrar o cliente")
+    res.status(500).send("Erro ao cadastrar o cliente")
     console.error("Não foi possível cadastrar", error)
 }
 
