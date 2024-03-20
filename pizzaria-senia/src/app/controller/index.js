@@ -17,7 +17,7 @@ app.get("/", (req,res) => {
     //     // res.json(results.rows);
     // });
 
-    res.send('Hello World!')
+    res.send('Hello World!');
 });
 
 app.post("/cadastro", async (req, res) => {

@@ -5,7 +5,7 @@ import { HeaderComponent } from './template/header/header.component';
 import { FooterComponent } from './template/footer/footer.component';
 import { PromocoesSemanalComponent } from './view/promocoes-semanal/promocoes-semanal.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CadastroServiceService } from './service/cadastro-service.service';
+import { CadastroServiceService } from './controller/service/cadastro-service.service';
 
 
 @Component({

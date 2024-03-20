@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { CadastroServiceService } from '../../service/cadastro-service.service';
+import { CadastroServiceService } from '../../controller/service/cadastro-service.service';
 @Component({
   selector: 'app-cadastro',
   standalone: true,
