@@ -20,6 +20,8 @@ app.get("/", (req,res) => {
     res.send('Hello World!');
 });
 
+//adiconar um histótico de pedido
+//fazer o hash da senha
 app.post("/cadastro", async (req, res) => {
 
 const {nome, email, telefone, endereco, senha} = req.body;

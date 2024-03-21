@@ -5,8 +5,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
+#mensagem-validacao{
+  color: var(--vermelho);
+  font-size: 12pt;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+}
 form {
   width: 50%;
   height: 70%;
@@ -15,6 +23,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 1;
 }
 
 input{

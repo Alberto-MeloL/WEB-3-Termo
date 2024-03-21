@@ -1,22 +1,28 @@
 <div class="container">
+
   <form [formGroup]="formCliente" (ngSubmit)="onSubmit()">
-<!-- sincronizar os dados com o formulario -->
+
+<!-- mensagem sobre os preenchimentos errados dos campos -->
+<p id="mensagem-validacao" *ngIf="mensagemValidacao">
+  {{ mensagemValidacao }}
+</p>
+  
+    <!-- sincronizar os dados com o formulario -->
     <label for="nome">Nome:</label>
-    <input type="text" formControlName="nome" id="nome" required>
+    <input type="text" formControlName="nome" id="nome" required />
 
     <label for="email">Email</label>
-    <input type="email" formControlName="email" id="email" required>
+    <input type="email" formControlName="email" id="email" required />
 
     <label for="telefone">Telefone</label>
-    <input type="tel" formControlName="telefone" id="telefone" required>
+    <input type="tel" formControlName="telefone" id="telefone" required />
 
     <label for="endereco">Endereço</label>
-    <input type="text" formControlName="endereco" id="endereco" required>
+    <input type="text" formControlName="endereco" id="endereco" required />
 
     <label for="senha">Senha</label>
-    <input type="password" formControlName="senha" id="senha" required>
+    <input type="password" formControlName="senha" id="senha" required />
 
-    <input id="btn-cadastrar-me" type="submit" value="Cadastrar-me" >
-
+    <input id="btn-cadastrar-me" type="submit" value="Cadastrar-me" />
   </form>
 </div>
