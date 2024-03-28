@@ -7,14 +7,14 @@ import { Observable } from 'rxjs';
 })
 export class CadastroServiceService {
 
-  private URL = 'http://localhost:3000/cadastro'
+  private URLCADASTRO = 'http://localhost:3000/cadastro'
 
   constructor(private http: HttpClient) { }
 
   cadastrarCliente(dadosCliente: any): Observable<unknown>{
 
-    return this.http.post(this.URL, dadosCliente);
+    return this.http.post(this.URLCADASTRO, dadosCliente);
   }
 
- 
+
 }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { CadastroServiceService } from '../../controller/service/cadastro-service.service';//serviço para realizar o cadastro
+import { CadastroServiceService } from '../../controller/service/cadastro/cadastro-service.service';//serviço para realizar o cadastro
 import { ValidacaoCadastroService } from '../../controller/validations/validacao-cadastro.service';//serviço para validar campos
 @Component({
   selector: 'app-cadastro',
@@ -37,6 +37,7 @@ validarCampos(campos:unknown):void{
 
     this.mensagemValidacao = resultadoValidacao.mensagem;
     console.log("Resultado da validação",this.mensagemValidacao);
+    throw new Error("Erro")//lança o erro, e impede o envio
   }
 }
 
@@ -46,6 +47,7 @@ validarCampos(campos:unknown):void{
     this.validarCampos(this.formCliente.value);
     console.log("Enviando dados...");
     if (this.formCliente.valid) {
+      console.log("Cadastrando cliente...")
       console.log(this.formCliente.value);
       this.cadastroService.cadastrarCliente(this.formCliente.value).subscribe({
         //melhorar esse tratamento

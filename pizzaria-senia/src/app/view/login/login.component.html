@@ -1,14 +1,18 @@
 <div class="container">
-    <div class="sub-container">
-    <form action="" method="get">
+
+  <!-- formulário -->
+    <form [formGroup]="formCliente" (ngSubmit)="onSubmit($event)">
 
         <label for="email-login">Email</label>
-        <input type="email" name="email-login" id="email-login" placeholder="Digite seu e-mail...">
+        <input type="email" formControlName="email" id="email-login" placeholder="Digite seu e-mail...">
 
         <label for="senha-login">Senha</label>
-        <input type="password" name="senha-login" id="senha-login" placeholder="Digite sua senha...">
+        <input type="password" formControlName="senha" id="senha-login" placeholder="Digite sua senha...">
 
-        <input type="button" value="Logar">
+        <!-- o botão precisa ser do tipo submit para que o ngSubmit seja ativado   -->
+        <input id="btn-login" type="submit" value="Logar">
     </form>
+
 </div>
-</div>
+
+<!-- gerenciamento de telas para visualizar o pedido por cima -->

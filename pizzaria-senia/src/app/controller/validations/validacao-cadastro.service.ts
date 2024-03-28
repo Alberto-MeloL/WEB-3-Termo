@@ -30,9 +30,10 @@ export class ValidacaoCadastroService {
 
     if (!this.validarSenha(senha) || senha.length < 8) {
         return {sucesso: false, mensagem: 'Preencha o campo SENHA corretamenre.'}
+        //menu bar e lancar o erro
     }
 
-    //retorna true se todos os requisitos forem válidos 
+    //retorna true se todos os requisitos forem válidos
     return { sucesso: true }
   }
 

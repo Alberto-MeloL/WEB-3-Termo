@@ -1,39 +1,47 @@
 .container {
   width: 100%;
-  height: 50%;
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.sub-container {
-  width: 70%;
-  height: 60%;
-  display: flex;
-flex-direction: column;
-  align-items: center;
-}
+/* formulário */
 form {
   width: 50%;
-  height: 70%;
+  height: 30vh;
   background-color: var(--laranja);
   border-radius: 5px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 
+/* caixas de texto */
 input {
   outline: 0;
   border-radius: 3px;
   border: solid 1px var(--preto);
   transition: 0.3s all ease-in-out;
+  margin-bottom: 2%;
+  max-width: 300px;
+  min-width: 200px;
+  width: auto;
 }
 
 input:focus {
   border: 1px solid var(--amarelo);
 }
 
-#btn-cadastrar-me {
+/* input:placeholder-shown{
+  background-color: antiquewhite;
+} */
+
+label{
+  font-size: 15pt;
+padding-right: 17%;
+}
+
+#btn-login {
   margin-top: 5%;
   height: 10%;
   background-color: var(--amarelo);
