@@ -1,16 +1,54 @@
 <div class="container">
-    <div class="cardapio">
-        <div class="produto" *ngFor="let produto of [0,1,2,3]">
-            <img src="" alt="">
-            <div class="descricao">
-                <p></p>
-            </div>
-            <div class="quantidade">
 
+    <div class="filtro-cardapio">
+
+
+        <div class="opcoes">
+
+            <div class="comidas">
+
+                <button id="btn-comidas">Comidas</button>
             </div>
-            <div class="valor">
-                <p></p>
+
+            <div class="bebidas">
+
+                <button id="btn-bebidas">Bebidas</button>
             </div>
+        </div>
+    </div>
+
+    <div class="container-produtos">
+
+        <div class="produto" *ngFor="let produto of [1,2,3,4,5,6,7,8,9,0,9,8,7,6,5,4,3,2,1]">
+
+            <div class="img">
+                <img src="assets/image/pizza-header.png" alt="">
+            </div>
+
+            <div class="nome-produto">
+                <p>pizaaaaaa</p>
+            </div>
+
+            <div class="descricao-produto">
+<p>kjdkgKJFGLKGFK</p>
+                <div class="sub-total">
+                    <p>R$0,11</p>
+                </div>
+            </div>
+
+            <div class="adicionar-ao-carrinho">
+
+                <div class="quantidades">
+                    <button>+</button>
+
+                    <span>1</span>
+
+                    <button>-</button>
+                </div>
+
+                <button id="btn-add-carrinho">Add</button>
+            </div>
+
         </div>
     </div>
 </div>

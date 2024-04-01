@@ -1,24 +1,105 @@
-.container{
+.container {
     width: 100%;
-    height: 50vh;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.filtro-cardapio {
+    width: 60%;
+    height: 100%;
+    background-color: var(--laranjaClaro);
+    border-radius: 0pc 15pc 15pc 0pc;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.cardapio{
-    width: 60%;
-    height: 40vh;
-    border: 5px solid var(--preto);
+.opcoes {
+    width: 40%;
+    height: 20%;
+    background-color: var(--branco);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.comidas {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+#btn-comidas {
+    background-color: var(--vermelho);
     border-radius: 5px;
+    border: 2px solid var(--vermelhoClaro);
+    cursor: pointer;
+
+}
+
+#btn-comidas:hover::before {
+    content: "\🍕";
+}
+
+.bebidas {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn-bebidas {
+    background-color: var(--amarelo);
+    border-radius: 5px;
+    border: 2px solid var(--amareloClaro);
+    cursor: pointer;
+}
+
+#btn-bebidas:hover::before {
+    content: "\🥤";
+}
+
+.container-produtos {
+    width: 40%;
+    height: 100%;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
 }
 
-.produto{
-    width: 100%;
+.produto {
+    width: 80%;
     height: 20%;
     background-color: var(--cinza);
+    border-radius: 5px;
     margin-bottom: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.img img {
+    height: 20px;
+}
+
+.descricao-produto {
+    display: flex;
+    flex-direction: row;
+}
+
+#btn-add-carrinho{
+    background-color: var(--verde);
+    border: none;
+    border-radius: 5px;
+    color: var(--branco);
+}
+
+.adicionar-ao-carrinho{
+    display: flex;
+    flex-direction: row;
 }

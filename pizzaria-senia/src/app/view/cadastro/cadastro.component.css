@@ -31,7 +31,8 @@ input{
     border-radius: 3px;
     border: solid 1px var(--preto);
     transition: .3s all ease-in-out;
-}
+caret-color: rgb(43, 186, 226);
+  }
 
 input:focus{
 border: 1px solid var(--amarelo);

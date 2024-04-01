@@ -5,9 +5,14 @@ body{
     margin: 0;
     top: 0;
     padding: 0;
-    font-family: "Impact," "Haettenschweiler", 'Arial Narrow Bold', "sans-serif"; /*fontes padrões*/
+    font-family: "Impact", "Haettenschweiler", 'Arial Narrow Bold', "sans-serif"; /*fontes padrões*/
+    scroll-behavior: smooth;
 }
 
+
+
+/*https://awari.com.br/descubra-como-personalizar-o-cursor-no-html-e-css/
+ https://medium.com/reprogramabr/5-truques-de-css-que-v%C3%A3o-fazer-a-diferen%C3%A7a-no-seu-site-1e0bba738b78#:~:text=Mudando%20as%20caracter%C3%ADsticas%20de%20um,nas%20chaves%20a%20altera%C3%A7%C3%A3o%20desejada. */
 :root{
     --laranja: #dd912e;
     --preto: #181717b4;
@@ -15,8 +20,10 @@ body{
     --branco: #ffffff;
     --verde: #298512e0;
     --amarelo: #e9fa4f;
+    --amareloClaro: #69730d5e;
     --laranjaClaro: #f5c17d;
     --vermelho: #ff0e0ecb;
+    --vermelhoClaro: #c11e1e9d;
 }
 
 /* cores da seleção */

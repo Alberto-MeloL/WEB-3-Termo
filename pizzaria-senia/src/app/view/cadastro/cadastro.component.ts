@@ -37,7 +37,7 @@ validarCampos(campos:unknown):void{
 
     this.mensagemValidacao = resultadoValidacao.mensagem;
     console.log("Resultado da validação",this.mensagemValidacao);
-    throw new Error("Erro")//lança o erro, e impede o envio
+    throw new Error("Erro")//lança o erro, e impede o envio ! !!
   }
 }
 
