@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AvaliacoesServiceService } from '../../controller/service/avaliacoes/avaliacoes-service.service';
 
 @Component({
   selector: 'app-footer',
@@ -10,6 +11,8 @@ import { CommonModule } from '@angular/common';
 })
 
 export class FooterComponent {
+
+  constructor(private avaliacaoService: AvaliacoesServiceService){}//injeção de dependências
   // estrelas = [1,2,3,4,5]; //representando as estrelas
   avaliacaoSelecionada = 0; //ou seja nenhuma
   // avaliacao = document.querySelectorAll('.estrela-icone')
