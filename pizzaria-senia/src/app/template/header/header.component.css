@@ -1,92 +1,58 @@
-.container {
+.container{
   width: 100%;
-  height: 30%;
+  height: 20vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  background: var(--laranja);
+
 }
 
-header {
-  width: 100%;
-  height: 70%;
+.informacoes-header{
+  width: 90%;
+  height: 90%;
   display: flex;
-  justify-content: space-between;
-  background-color: var(--laranja);
-}
-
-header h1 {
-  color: var(--branco);
-  text-transform: uppercase;
-}
-
-.onde-nos-encontrar {
-  width: 15%;
-  display: flex;
-  flex-direction: column;
-  padding-right: 2%;
+  justify-content: space-around;
   align-items: center;
 }
 
-.onde-nos-encontrar p {
-  color: var(--branco);
-  font-size: 12pt;
-  text-transform: uppercase;
+.logo img{
+  width: 150px;
 }
 
-.redes-sociais {
+.onde-nos-encontrar{
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--cinza);
+  border-radius: 5px;
+}
+
+.redes-sociais{
+  height: 90%;
   display: flex;
   flex-direction: row;
-}
-#whatsapp,
-#instagram,
-#facebook {
-  margin-top: 40%;
-  height: 50px;
-  width: 55px;
-}
-
-.header-links-navegacao {
-  width: 100%;
-  height: 30%;
-  background-color: var(--preto);
-  display: flex;
-}
-
-.header-links-navegacao img {
-  width: 100px;
-  height: 64px;
-}
-.header-links-navegacao a {
-  display: flex;
-  flex-direction: column-reverse;
   align-items: center;
-  padding-right: 5%;
 }
 
-.minha-conta {
-  width: 60%;
-  display: flex;
-  justify-content: end;
-}
+/* tamanho das imagens(redes sociais) */
 
-/* responsividade */
+#whatsapp{
+  height: 50px;
+}
+#instagram{
+  height: 50px;
+}
+#facebook{
+  height: 45px;
 
-@media screen and (max-width:1280px){
-  #whatsapp,
-#instagram,
-#facebook {
-  margin-top: 20%;
-  height: 30px;
-  width: 35px;
 }
- .header-links-navegacao img{
-height: 30px;
-width: 45px;
-}
-
-.onde-nos-encontrar p{
-font-size: 7pt;
-}
-.onde-nos-encontrar{
-margin-top: 2%;
-}
+.links-navegacao {
+  display: flex; /* Ativa o Flexbox */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  align-items: center; /* Centraliza os itens verticalmente */
+  flex-wrap: wrap; /* Permite que os itens passem para a próxima linha, se necessário */
+  gap: 20px; /* Espaçamento entre os itens */
+  padding: 20px 0; /* Espaçamento superior e inferior */
 }

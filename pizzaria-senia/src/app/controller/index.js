@@ -69,6 +69,21 @@ app.post("/login", async (req, res) => {
   }
 });
 
+app.post("/avaliar", async (req, res) => {
+  const { avaliacao } = req.body; //obtendo a avaliação do cliente
+  console.log("Aaliação do cliente", req.body);
+
+  const query = "INSERT INTO tbl_feedbacks (qntd_estrelas) VALUES ($1)";
+  try {
+    const resultado = await pool.query(query, [avaliacao]);
+
+    //resposta
+    res.status(200).json({ message: "Avaliação bem sucedida!" })
+  } catch (error) {
+    console.error("Erro ao avaliar", error);
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Servidor rodando em: http://localhost:${PORT}...`);
 });

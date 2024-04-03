@@ -13,17 +13,25 @@ import { AvaliacoesServiceService } from '../../controller/service/avaliacoes/av
 export class FooterComponent {
 
   constructor(private avaliacaoService: AvaliacoesServiceService){}//injeção de dependências
-  // estrelas = [1,2,3,4,5]; //representando as estrelas
-  avaliacaoSelecionada = 0; //ou seja nenhuma
-  // avaliacao = document.querySelectorAll('.estrela-icone')
+  estrelas = [1,2,3,4,5]; //representando as estrelas
+  avaliacaoSelecionada = 0; //ponto inicial
 
   getAvaliacao(index: number):void {
     this.avaliacaoSelecionada = index; //qual foi selecionada
     console.log('Indíce:', index)
 
-    // if (this.avaliacaoSelecionada != -1) {
-    //   this.estrelas[index].
-    // }
+//adicionar +1 pois o array começa em zero ou seja se for adicionada a primeira estrela, que é 0 
+//como esta acrescentando mais 1, a estrala será igual a 1, e assim por diante
+    this.avaliacaoService.enviarAvaliacao(index + 1).subscribe(
+
+      (resposta) => { console.log("Resposta sendo enviada", resposta)},
+      (error) => {console.error("Opa, ocorreu um erro", error)}
+    )
+
+
+
+    
+  
   
   }
 }

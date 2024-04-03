@@ -17,7 +17,7 @@
 
       <ul class="avaliacao">
         <li
-          *ngFor="let estrela of [0, 1, 2, 3, 4]; let i = index"
+          *ngFor="let estrela of estrelas; let i = index"
           class="estrela-icone"
           [class.ativo]="i === avaliacaoSelecionada"
           (click)="getAvaliacao(i)"

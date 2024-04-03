@@ -20,14 +20,13 @@ realizarLogin(email: string, senha: string):Observable<unknown>{
     //retorno dos dados
     email,
     senha
-
   });
 
 }
 
 //método enquanto estiver logado no site
 logado(qntdPedidos: string): boolean{
-
+console.log(this.realizarLogin)
   return true;
 }
 }
