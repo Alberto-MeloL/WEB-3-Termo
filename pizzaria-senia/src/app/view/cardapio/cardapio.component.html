@@ -38,13 +38,13 @@
 
             <div class="adicionar-ao-carrinho">
 
-                <div class="quantidades">
-                    <button>+</button>
+                    <div class="quantidades">
+                        <button id="btn-adicionar-qntd" (click)="pedidoService.addQuantidade()">+</button>
 
-                    <span>1</span>
+                        <span id="quantidade-produto">{{pedidoService.quantidade}}</span>
 
-                    <button>-</button>
-                </div>
+                        <button id="btn-remover-qntd" (click)="pedidoService.removerQuantidade()" [disabled]="pedidoService.quantidade < 1">-</button>
+                    </div>
 
                 <button id="btn-add-carrinho">Add</button>
             </div>
