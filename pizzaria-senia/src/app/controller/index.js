@@ -1,4 +1,4 @@
-import express, { query } from "express";
+import express from "express";
 import cors from "cors";
 import pool from "./database.js";
 
@@ -8,14 +8,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+//rota de teste
 app.get("/", (req, res) => {
-  // database.query("CREATE DATABASE pizzaria ", (error, results) => {
-  //     if (error) {
-  //         throw error;
-  //     }
-  //     // res.json(results.rows);
-  // });
-
   res.send("Hello World!");
 });
 
@@ -38,8 +32,8 @@ app.post("/cadastro", async (req, res) => {
   }
 });
 
-//rota para realizar o login
 
+//rota para realizar o login
 app.post("/login", async (req, res) => {
   //recebendo dados
   const { email, senha } = req.body;
@@ -69,6 +63,8 @@ app.post("/login", async (req, res) => {
   }
 });
 
+
+//rota para ser realizada a avaliação
 app.post("/avaliar", async (req, res) => {
   const { avaliacao } = req.body; //obtendo a avaliação do cliente
   console.log("Aaliação do cliente", req.body);
@@ -78,12 +74,26 @@ app.post("/avaliar", async (req, res) => {
     const resultado = await pool.query(query, [avaliacao]);
 
     //resposta
-    res.status(200).json({ message: "Avaliação bem sucedida!" })
+    res.status(200).json({ message: "Avaliação bem sucedida!" });
   } catch (error) {
     console.error("Erro ao avaliar", error);
   }
 });
 
+
+//rota para realizar o pedido
+app.post("/realizar-pedido", async (req, res) => {
+
+  const {udCliente, nomeProduto, qntdProduto, subTotal} = req.body;
+  console.log("Requisição do pedido", req.body);
+
+  const queryPedido = "INSERT INTO tbl_pedidos ()"
+  try {
+
+  } catch (error) {
+console.error("Erro ao realizar pedido", error);
+  }
+});
 app.listen(PORT, () => {
   console.log(`Servidor rodando em: http://localhost:${PORT}...`);
 });

@@ -7,8 +7,10 @@ import { PedidoService } from '../../controller/service/pedidos/pedido.service';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './cardapio.component.html',
-  styleUrl: './cardapio.component.css'
+  styleUrl: './cardapio.component.css',
 })
 export class CardapioComponent {
 constructor(public pedidoService: PedidoService){}
+
+
 }

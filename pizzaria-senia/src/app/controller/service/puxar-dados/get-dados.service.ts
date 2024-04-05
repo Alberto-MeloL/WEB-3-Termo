@@ -9,7 +9,7 @@ export class GetDadosService {
 
   constructor(private http: HttpClient) { }
 
-  getDados(){
+  getDados(): undefined{
 
   }
 }

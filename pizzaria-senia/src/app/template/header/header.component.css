@@ -1,25 +1,26 @@
-.container{
+.container {
   width: 100%;
   height: 20vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   background: var(--laranja);
-
 }
 
-.informacoes-header{
+.informacoes{
   width: 90%;
-  height: 90%;
+  height: 50%;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.logo img{
+/* imagem logo do site */
+#logo{
   width: 150px;
 }
 
-.onde-nos-encontrar{
+.onde-nos-encontrar {
   width: 20%;
   height: 100%;
   display: flex;
@@ -28,30 +29,50 @@
   border-radius: 5px;
 }
 
-.redes-sociais{
+.redes-sociais {
   height: 90%;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-/* tamanho das imagens(redes sociais) */
+  /* tamanho das imagens(redes sociais) */
 
-#whatsapp{
+#whatsapp {
   height: 50px;
 }
-#instagram{
+#instagram {
   height: 50px;
 }
-#facebook{
+#facebook {
   height: 45px;
+}
+
+
+.links-navegacao{
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
 
 }
-.links-navegacao {
-  display: flex; /* Ativa o Flexbox */
-  justify-content: center; /* Centraliza os itens horizontalmente */
-  align-items: center; /* Centraliza os itens verticalmente */
-  flex-wrap: wrap; /* Permite que os itens passem para a próxima linha, se necessário */
-  gap: 20px; /* Espaçamento entre os itens */
-  padding: 20px 0; /* Espaçamento superior e inferior */
+
+ul{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li{
+  margin-left: 10px;
+}
+a{
+  padding: 10px;
+  transition: 1s;
+}
+
+a:hover{
+  color: var(--cinza);
+  cursor: pointer;
 }

@@ -1,0 +1,43 @@
+Together, Docker and Kubernetes are the best way to build an adaptable and efficient software development environment. Docker ensures that your applications are fast and system-agnostic, while Kubernetes ensures they have the maximum uptime, proper load balancing, and ability to scale the cluster at will
+https://www.techtudo.com.br/noticias/2016/10/descubra-10-truques-para-usar-o-prompt-de-comando-no-windows-10.ghtml
+
+maio
+ 04
+
+<?php
+include 'functions.php';
+
+?>
+
+<=?template_header('pizzaria')?>
+
+<div class="content">
+<h2>Inicio</h2>
+<p>Seja Bem Vindo!</p>
+</div>
+
+<=?template_footer()?>
+
+
+create table if not exists contatos (
+id_contato varcjhar(255) not null,
+nome varchar(255) not null,
+email varchar(255) not null,
+cel varchar(255) not null,
+pizza varchar(255) not null,
+cadastro date not null DEFAULT CURRENT_TIMESTAMP,
+)
+
+INSERT INTO contatos (id_contato, nome, email, cel, pizza, cadastro) VALUES
+
+
+
+SELECT * FROM contatos
+
+SELECT * FROM contatos ORDER BY id_contato OFFSET :offset 1 :1
+
+SELECT COUNT(*) FROM contatos
+
+--ver mais SQL / PHP, guanabara
+
+sempre que eu for apagar algo busco pelo id
