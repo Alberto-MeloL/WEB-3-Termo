@@ -69,9 +69,9 @@ app.post("/avaliar", async (req, res) => {
   const { avaliacao } = req.body; //obtendo a avaliação do cliente
   console.log("Aaliação do cliente", req.body);
 
-  const query = "INSERT INTO tbl_feedbacks (qntd_estrelas) VALUES ($1)";
+  const query = "INSERT INTO tbl_feedbacks (qntd_estrelas, id_cliente) VALUES ($1, $2)";
   try {
-    const resultado = await pool.query(query, [avaliacao]);
+    const resultado = await pool.query(query, [avaliacao, 1]);
 
     //resposta
     res.status(200).json({ message: "Avaliação bem sucedida!" });
