@@ -1,0 +1,34 @@
+.container{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.autenticacao{
+    width: 50%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#btn-cadastrar, #btn-login{
+    width: 30%;
+    height: 60%;
+    background-color: var(--laranja);
+}
+
+#btn-cadastrar{
+    border-radius: 5px 0px 0px 5px;
+}
+
+#btn-login{
+
+border-radius: 0px 5px 5px 0px;
+}
+a{
+font-size: 20pt;
+padding: 20%;
+}

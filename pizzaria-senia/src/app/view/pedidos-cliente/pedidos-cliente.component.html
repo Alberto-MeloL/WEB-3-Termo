@@ -1,1 +1,35 @@
-<p>pedidos-cliente works!</p>
+<app-header></app-header>
+<div class="container">
+  <div class="finalizar-pedido">
+    <div class="visualizar-pedido">
+      <h1>Deseja finalizar seu pedido?</h1>
+
+      <div class="pedido">
+        <div class="itens" *ngFor="let item of [1,0,2,4,4,4,4,4,4,4,4,4,4]">
+          <p>Pizza de Frango com Catupiri</p>
+
+          <p>Quantidade <span>2</span></p>
+          <span>R$20,00</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="valor-total">
+      <p>Valor Total <span>R$20,00</span></p>
+    </div>
+
+    <div class="confirmar-pedido">
+      <button type="submit" id="btn-confirmar-pedido">Confirmar Pedido</button>
+      <button type="submit" id="btn-cancelar-pedido">Cancelar Pedido</button>
+    </div>
+  </div>
+
+  <div class="animacoes">
+    <div class="imagens">
+      <img src="assets/image/pizza-header.png" alt="Imagem pizza" />
+    </div>
+    <div class="texto-animado">
+      <p></p>
+    </div>
+  </div>
+</div>

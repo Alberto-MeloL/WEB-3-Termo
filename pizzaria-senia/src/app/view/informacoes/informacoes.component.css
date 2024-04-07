@@ -1,0 +1,38 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.escopo{
+  width: 100%;
+  height: 15%;
+  background-color: var(--laranja);
+  display: flex;
+flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.informacoes{
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-y: scroll;
+}
+
+.copyright{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--laranja);
+    position: fixed;
+    bottom: 0;
+}
+
+
+

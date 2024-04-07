@@ -1,11 +1,11 @@
 <div class="container">
 
-  <form [formGroup]="formCliente" (ngSubmit)="onSubmit()">
+  <form [formGroup]="formCliente" (ngSubmit)="onSubmit()" >
 
 <!-- mensagem sobre os preenchimentos errados dos campos -->
-<p id="mensagem-validacao" *ngIf="mensagemValidacao">
-  {{ mensagemValidacao }}
-</p>
+  <p id="mensagem-validacao" *ngIf="mensagemValidacao">
+    {{ mensagemValidacao }}
+  </p>
   
     <!-- sincronizar os dados com o formulario -->
     <label for="nome">Nome:</label>

@@ -32,7 +32,7 @@ export class LoginComponent {
     this.loginService.realizarLogin(email, senha).subscribe({
       //respostas
       next: (res) => {
-        this.router.navigate(['/']);//lembrar de fazer rotas coringa, e emitir uma mensagem
+        this.router.navigate(['/home']);//lembrar de fazer rotas coringa, e emitir uma mensagem
         console.log('Login realizado com sucesso!', res);
       },
       error: (err) => {

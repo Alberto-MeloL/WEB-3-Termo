@@ -15,8 +15,8 @@ export class LoginServiceService {
 
 realizarLogin(email: string, senha: string):Observable<unknown>{
 
+  console.log("logado")
   return this.http.post(this.URLOGIN, {
-
     //retorno dos dados
     email,
     senha
@@ -25,8 +25,7 @@ realizarLogin(email: string, senha: string):Observable<unknown>{
 }
 
 //método enquanto estiver logado no site
-logado(qntdPedidos: string): boolean{
-console.log(this.realizarLogin)
-  return true;
-}
+// estaLogado(): boolean{
+
+// }
 }
