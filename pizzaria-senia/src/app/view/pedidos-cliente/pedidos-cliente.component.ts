@@ -10,7 +10,19 @@ import { CommonModule } from '@angular/common';
     imports: [HeaderComponent, CommonModule]
 })
 export class PedidosClienteComponent {
+    frases = ['Há anguns clicks', 'Do melhor', 'Sabor!'];
+    fraseAtual?: string;
+    contador: number = 0;
 
 
-    // fazer um for para animar o texto, add caracter por vez
+
+    //método para mudar as frases
+    mudarFrases() {
+        setTimeout(() => {
+
+            this.fraseAtual = this.frases[this.contador];
+        }, 2000)
+        this.contador++;
+console.log(this.contador)
 }
+    }
