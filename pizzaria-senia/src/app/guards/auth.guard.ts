@@ -1,20 +1,16 @@
-// import { CanActivate, Router } from '@angular/router';
-// import { Injectable } from '@angular/core';
-// import { AuthService } from '../controller/service/auth/auth.service';
-
-// @Injectable({
-//   providedIn: 'root',
-// })
-// export class AuthGuard implements CanActivate {
-
-//   constructor(private authService: AuthService, private router: Router){}
-
-//   canAcitvate(): boolean {
-//     if (this.authService.estaLogado()) {
-// return true;
-//     }else{
-//       this.router.navigate(['/login']);
-//       return false
-//     }
-//   }
-// }
+import {
+  CanActivateFn,
+  Router,
+  ActivatedRouteSnapshot,
+  RouterStateSnapshot,
+} from '@angular/router';
+import { inject } from '@angular/core';//maiusculo
+export const authGuard: CanActivateFn = (
+  routes: ActivatedRouteSnapshot,
+  state: RouterStateSnapshot
+) => {
+  const router: Router = inject(Router);
+  const protectdRoutes: string[] = ['/informacoes'];
+  const sessao = true;
+  return protectdRoutes.includes(state.url) && !sessao ? router.navigate(['/home-deslogado']) : false;
+};//ainda não funciona

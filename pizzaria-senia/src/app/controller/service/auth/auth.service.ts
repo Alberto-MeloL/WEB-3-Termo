@@ -18,7 +18,7 @@ export class AuthService {
 
   private tokenExpirado(token: string): boolean{
     const expirado = (JSON.parse(atob(token.split('.')[1]))).exp;
-
-    return (Math.floor((new Date).getTime() / 1000)) >= expirado;
+const sessao = Math.floor(new Date().getTime() / 1000) >= expirado;
+    return sessao;
   }
 }
