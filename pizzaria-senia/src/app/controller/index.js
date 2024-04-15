@@ -3,6 +3,7 @@ import cors from "cors";
 import pool from "./database.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
+import { time } from "console";
 const saltRounds = 10;
 
 const PORT = 3000;
@@ -64,7 +65,6 @@ const tokenData = {
 
 //gerando o token
 const token = jwt.sign(tokenData, SECRETE_KEY, {expiresIn: '1m'});
-
 res.status(200).json({message: "Login realizado com sucesso.", token: token});
 
 }

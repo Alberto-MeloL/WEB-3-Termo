@@ -6,7 +6,7 @@ export const authGuard: CanActivateFn = (
 ): boolean => {
 const router = inject(Router);
 const protectedRoutes: string[] = ['/home'];
-const sessao = false
+const sessao = true;//teste
   if (protectedRoutes.includes(state.url) && !sessao) {
     router.navigate(['/login']);
 return false;
