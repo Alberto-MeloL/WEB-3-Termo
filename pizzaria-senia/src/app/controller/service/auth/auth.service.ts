@@ -4,27 +4,25 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class AuthService {
-  sessao: boolean = false;
+  static sessao: boolean;
   constructor() { }
 
   estaLogado(): boolean {
     const token = localStorage.getItem('token');
 
-    return !!token && !this.tokenExpirado(token);
+    return !!token && !this.tokenExpirado(token);//retorna v ou f
+    
   }
 
   private tokenExpirado(token: string): boolean {
-    const expirado = (JSON.parse(atob(token.split('.')[1]))).exp;
-    const tempo = Math.floor(new Date().getTime() / 1000) >= expirado;
-    if (tempo >= expirado) {
+    const expirado = (JSON.parse(atob(token.split('.')[1]))).exp;//acessao o playload do token
+    const tempoAtual = Math.floor(new Date().getTime() / 1000) >= expirado;//iguala o tempo em mesma escala do token
+    if (tempoAtual >= expirado) {
 
-      return this.sessao = false;
+      return AuthService.sessao = false;
     }else{
-      return this.sessao = true
+      return AuthService.sessao = true
     }
   }
- getSessao(){
-  return this.sessao;
-}
 }
 
