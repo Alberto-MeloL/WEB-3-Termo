@@ -10,7 +10,11 @@ export class AuthService {
   estaLogado(): boolean {
     if (isPlatformBrowser(this.platformId)) {
       const token = localStorage.getItem('token');
+      console.log("disponivel")
       return !!token && !this.tokenExpirado(token);
+    }else{
+            console.log('nao disponivel');
+
     }
     return false; // Retorna false se não estiver no ambiente do navegador
   }

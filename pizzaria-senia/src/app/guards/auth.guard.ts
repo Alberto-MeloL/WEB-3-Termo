@@ -24,12 +24,15 @@ export class AuthGuard implements CanActivate {
       '/meu-pedido',
     ];
 
-    if (protectedRoutes.includes(state.url) && this.authService.estaLogado()) {
+    if (protectedRoutes.includes(state.url) && !this.authService.estaLogado()) {
       // Se o usuário não está logado e tenta acessar uma rota protegida, redirecione para o login.
       this.router.navigate(['/login']);
       return false;
+    }else{
+      this.router.navigate(['/home'])
+      return true;
     }
-    // Permitir acesso se não estiver tentando acessar uma rota protegida ou se estiver logado.
-    return true;
+    // // Permitir acesso se não estiver tentando acessar uma rota protegida ou se estiver logado.
+    // return true;
   }
 }

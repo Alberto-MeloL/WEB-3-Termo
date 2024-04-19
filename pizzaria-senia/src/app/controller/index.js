@@ -3,7 +3,8 @@ import cors from "cors";
 import pool from "./database.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { time } from "console";
+
+
 const saltRounds = 10;
 
 const PORT = 3000;
