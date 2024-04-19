@@ -8,8 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { CadastroServiceService } from './controller/service/cadastro/cadastro-service.service';
 import { LoginServiceService } from './controller/service/login/login-service.service';
 import { AvaliacoesServiceService } from './controller/service/avaliacoes/avaliacoes-service.service';
-import { RealizarPedidoService } from './controller/service/realizar-pedidos/realizar-pedido.service';
-import { AuthService } from './controller/service/auth/auth.service';
+// import { AuthService } from './controller/service/auth/auth.service';
+import { PedidoService } from './controller/service/pedidos/pedido.service';
 
 
 @Component({
@@ -17,7 +17,7 @@ import { AuthService } from './controller/service/auth/auth.service';
   standalone: true,
   imports: [CommonModule, RouterOutlet,HttpClientModule, HeaderComponent, FooterComponent, PromocoesSemanalComponent],
   templateUrl: './app.component.html',
-  providers: [CadastroServiceService, LoginServiceService, AvaliacoesServiceService, RealizarPedidoService, AuthService],//porque colocar isso
+  providers: [CadastroServiceService, LoginServiceService, AvaliacoesServiceService, PedidoService],//porque colocar isso
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {

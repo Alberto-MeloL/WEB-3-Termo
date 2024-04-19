@@ -70,7 +70,7 @@ export class CadastroComponent {
       this.formCliente.reset({
         nome: '',
         email: '',
-        telefone: '',
+        telefone: '',   
         endereco: '',
         senha: '',
       });

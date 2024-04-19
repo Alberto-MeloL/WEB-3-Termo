@@ -98,16 +98,19 @@ app.post("/avaliar", async (req, res) => {
 //rota para realizar o pedido
 app.post("/realizar-pedido", async (req, res) => {
 
-  const {udCliente, nomeProduto, qntdProduto, subTotal} = req.body;
+  const queryPedido = "INSERT INTO tbl_pedidos (id_pedido, id_cliente, status_pedido, valor_total, email) VALUES(1, 1, '', 0,11, 'teste@gmail.com')"
   console.log("Requisição do pedido", req.body);
 
-  const queryPedido = "INSERT INTO tbl_pedidos ()"
   try {
-
+const resultado = await pool.query(queryPedido)
   } catch (error) {
 console.error("Erro ao realizar pedido", error);
   }
 });
+
+
+
+
 app.listen(PORT, () => {
   console.log(`Servidor rodando em: http://localhost:${PORT}...`);
 });
