@@ -1,23 +1,35 @@
-import {CanActivateFn,Router,ActivatedRouteSnapshot,RouterStateSnapshot} from '@angular/router';
-// import { AuthService } from '../controller/service/auth/auth.service';
-import { inject } from '@angular/core';
+import { Injectable } from '@angular/core';
+import {
+  CanActivate,
+  Router,
+  ActivatedRouteSnapshot,
+  RouterStateSnapshot,
+} from '@angular/router';
 import { AuthService } from '../controller/service/auth/auth.service';
 
-export const authGuard: CanActivateFn = (
-  route: ActivatedRouteSnapshot,
-  state: RouterStateSnapshot
-): boolean => {
-  const authService = new AuthService();//instacia do service
-const router = inject(Router);
-// const authService = new AuthService().estaLogado()
-const protectedRoutes: string[] = ['/home'];
+@Injectable({
+  providedIn: 'root',
+})
+export class AuthGuard implements CanActivate {
+  constructor(private authService: AuthService, private router: Router) {}
 
-  if (protectedRoutes.includes(state.url) && authService.estaLogado()) {
-    router.navigate(['/login']);
-return false;
+  canActivate(
+    route: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot
+  ): boolean {
+    const protectedRoutes: string[] = [
+      '/home',
+      '/informacoes',
+      '/cardapio',
+      '/meu-pedido',
+    ];
 
+    if (protectedRoutes.includes(state.url) && this.authService.estaLogado()) {
+      // Se o usuário não está logado e tenta acessar uma rota protegida, redirecione para o login.
+      this.router.navigate(['/login']);
+      return false;
+    }
+    // Permitir acesso se não estiver tentando acessar uma rota protegida ou se estiver logado.
+    return true;
   }
-  return true
 }
-
-

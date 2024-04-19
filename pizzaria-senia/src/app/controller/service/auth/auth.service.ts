@@ -1,29 +1,24 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-
-  static sessao: boolean;
-  constructor() { }
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   estaLogado(): boolean {
-    const token = localStorage.getItem('token');
-
-    return !!token && !this.tokenExpirado(token);//retorna v ou f
-
+    if (isPlatformBrowser(this.platformId)) {
+      const token = localStorage.getItem('token');
+      return !!token && !this.tokenExpirado(token);
+    }
+    return false; // Retorna false se não estiver no ambiente do navegador
   }
 
   private tokenExpirado(token: string): boolean {
-    const expirado = (JSON.parse(atob(token.split('.')[1]))).exp;//acessao o playload do token
-    const tempoAtual = Math.floor(new Date().getTime() / 1000) >= expirado;//iguala o tempo em mesma escala do token
-    if (tempoAtual >= expirado) {
-
-      return AuthService.sessao = false;
-    }else{
-      return AuthService.sessao = true
-    }
+    const payload = JSON.parse(atob(token.split('.')[1]));
+    const expirado = payload.exp;
+    const tempoAtual = Math.floor(new Date().getTime() / 1000);
+    return tempoAtual >= expirado;
   }
 }
-

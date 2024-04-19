@@ -6,22 +6,22 @@ import { HomeComponent } from './view/home/home.component';
 import { HomeDeslogadoComponent } from './view/home-deslogado/home-deslogado.component';
 import { InformacoesComponent } from './view/informacoes/informacoes.component';
 import { PedidosClienteComponent } from './view/pedidos-cliente/pedidos-cliente.component';
-import { authGuard } from './guards/auth.guard';
+import { AuthGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
   { path: '', component: HomeDeslogadoComponent },
-  { path: 'home', component: HomeComponent, canActivate: [authGuard] },
-  { path: 'cadastro', component: CadastroComponent, canActivate: [authGuard] },
-  { path: 'login', component: LoginComponent, canActivate: [authGuard] },
-  { path: 'cardapio', component: CardapioComponent, canActivate: [authGuard] },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'cadastro', component: CadastroComponent, canActivate: [AuthGuard] },
+  { path: 'login', component: LoginComponent, canActivate: [AuthGuard] },
+  { path: 'cardapio', component: CardapioComponent, canActivate: [AuthGuard] },
   {
     path: 'informacoes',
     component: InformacoesComponent,
-    canActivate: [authGuard],
+    canActivate: [AuthGuard],
   },
   {
     path: 'meu-pedido',
     component: PedidosClienteComponent,
-    canActivate: [authGuard],
+    canActivate: [AuthGuard],
   },
 ];
