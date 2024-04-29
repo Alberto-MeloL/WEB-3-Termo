@@ -1,28 +1,28 @@
-import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+// import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
+// import { isPlatformBrowser } from '@angular/common';
 
-@Injectable({
-  providedIn: 'root',
-})
-export class AuthService {
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+// @Injectable({
+//   providedIn: 'root',
+// })
+// export class AuthService {
+//   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
-  estaLogado(): boolean {
-    if (isPlatformBrowser(this.platformId)) {
-      const token = localStorage.getItem('token');
-      console.log("disponivel")
-      return !!token && !this.tokenExpirado(token);
-    }else{
-            console.log('nao disponivel');
+//   estaLogado(): boolean {
+//     if (isPlatformBrowser(this.platformId)) {
+//       const token = localStorage.getItem('token');
+//       console.log("disponivel")
+//       return !!token && !this.tokenExpirado(token);
+//     }else{
+//             console.log('nao disponivel');
 
-    }
-    return false; // Retorna false se não estiver no ambiente do navegador
-  }
+//     }
+//     return false; // Retorna false se não estiver no ambiente do navegador
+//   }
 
-  private tokenExpirado(token: string): boolean {
-    const payload = JSON.parse(atob(token.split('.')[1]));
-    const expirado = payload.exp;
-    const tempoAtual = Math.floor(new Date().getTime() / 1000);
-    return tempoAtual >= expirado;
-  }
-}
+//   private tokenExpirado(token: string): boolean {
+//     const payload = JSON.parse(atob(token.split('.')[1]));
+//     const expirado = payload.exp;
+//     const tempoAtual = Math.floor(new Date().getTime() / 1000);
+//     return tempoAtual >= expirado;
+//   }
+// }

@@ -11,7 +11,8 @@ export class HeaderComponent {
 menuHamburguer: boolean = false;
 
 openMenu(): void{
-  this.menuHamburguer != this.menuHamburguer
+  this.menuHamburguer != this.menuHamburguer;
+  console.log(this.menuHamburguer)
 }
 
 }
